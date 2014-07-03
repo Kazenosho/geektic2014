@@ -21,9 +21,8 @@ public class GeekDaoTest extends BaseDaoTest{
 
 	@Test
 	public void test() {
-		List<Geek> listGeeks = geekDaoTest.findAll();
-		
-		assertEquals(listGeeks.size(), 3);
+		List<Geek> listGeeks = geekDaoTest.findAllGeeks();
+		assertEquals(listGeeks.size(), 2);
 	}
 
 }

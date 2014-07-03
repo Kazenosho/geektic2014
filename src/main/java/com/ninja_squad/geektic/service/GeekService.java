@@ -8,6 +8,7 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,9 +22,10 @@ public class GeekService {
 	@Autowired
 	private GeekDao geekDao;
 	
-	@RequestMapping(method = GET)
-	public List<Geek> afficheGeeks(){
-		List<Geek> listeGeeks = geekDao.findAll();
+	@RequestMapping(method = GET,value = "/{sexe}")
+	public List<Geek> afficheGeeks(@PathVariable char sexe){
+		List<Geek> listeGeeks = geekDao.findAllGeeks(sexe);
 		return listeGeeks;
 	}
+	
 }
