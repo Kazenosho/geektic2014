@@ -20,9 +20,21 @@ public class GeekDaoTest extends BaseDaoTest{
 
 
 	@Test
-	public void test() {
-		List<Geek> listGeeks = geekDaoTest.findAllGeeks();
+	public void testRecupTousLesGeeks() {
+		List<Geek> listGeeks = geekDaoTest.findAllGeeks('M');
 		assertEquals(listGeeks.size(), 2);
+	}
+	
+	@Test
+	public void testRecupToutesLesGeekettes() {
+		List<Geek> listGeeks = geekDaoTest.findAllGeeks('F');
+		assertEquals(listGeeks.size(), 1);
+	}
+	
+	@Test
+	public void testRecupGeekById() {
+		Geek geek = geekDaoTest.findGeekById(1L);
+		assertEquals(geek.getNom(), "Affou");
 	}
 
 }

@@ -17,15 +17,15 @@ import com.ninja_squad.geektic.entites.Geek;
 
 @RestController
 @Transactional
-@RequestMapping("/geek")
-public class GeekService {
+@RequestMapping("/afficheGeeks")
+public class GeeksService {
 	@Autowired
 	private GeekDao geekDao;
 	
-	@RequestMapping(method = GET,value = "/{id}")
-	public Geek afficheGeeks(@PathVariable long id){
-		Geek geek = geekDao.findGeekById(id);
-		return geek;
+	@RequestMapping(method = GET,value = "/{sexe}")
+	public List<Geek> afficheGeeks(@PathVariable char sexe){
+		List<Geek> listeGeeks = geekDao.findAllGeeks(sexe);
+		return listeGeeks;
 	}
 	
 }

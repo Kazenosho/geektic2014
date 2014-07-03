@@ -105,6 +105,14 @@ public class Geek {
 		this.sexe = sexe;
 	}
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	
 	
 }

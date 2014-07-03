@@ -23,5 +23,10 @@ public class GeekDao {
 		return query.getResultList(); 
 	}
 	
+	 public Geek findGeekById(long id)
+     {
+		 return em.find(Geek.class, id); 
+     }
+	
 
 }
