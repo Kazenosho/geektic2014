@@ -3,6 +3,9 @@ package com.ninja_squad.geektic.dao;
 import com.ninja_squad.dbsetup.DbSetupTracker;
 import com.ninja_squad.dbsetup.destination.DataSourceDestination;
 import com.ninja_squad.dbsetup.destination.Destination;
+import com.ninja_squad.tpdi.SpectacleDao;
+import com.ninja_squad.tpdi.SpectacleService;
+
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -23,7 +26,9 @@ import javax.sql.DataSource;
 @EnableTransactionManagement(proxyTargetClass = true)
 @ComponentScan("com.ninja_squad.geektic.dao")
 public class DaoTestConfig {
-
+	
+	private GeekDao mockGeekDao;
+	
     @Bean
     public LocalContainerEntityManagerFactoryBean emf() {
         LocalContainerEntityManagerFactoryBean result = new LocalContainerEntityManagerFactoryBean();
