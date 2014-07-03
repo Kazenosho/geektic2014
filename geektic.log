@@ -1,0 +1,111 @@
+12:53:56,466 DEBUG main hibernate.SQL:109 - alter table GEEK_INTERET drop constraint FK_lwuuolj8q5j1uctmdferat7ax
+12:53:56,470 ERROR main hbm2ddl.SchemaExport:425 - HHH000389: Unsuccessful: alter table GEEK_INTERET drop constraint FK_lwuuolj8q5j1uctmdferat7ax
+12:53:56,470 ERROR main hbm2ddl.SchemaExport:426 - user lacks privilege or object not found: PUBLIC.GEEK_INTERET
+12:53:56,470 DEBUG main hibernate.SQL:109 - alter table GEEK_INTERET drop constraint FK_747i96qa9m0uyav43h268o297
+12:53:56,483 ERROR main hbm2ddl.SchemaExport:425 - HHH000389: Unsuccessful: alter table GEEK_INTERET drop constraint FK_747i96qa9m0uyav43h268o297
+12:53:56,484 ERROR main hbm2ddl.SchemaExport:426 - user lacks privilege or object not found: PUBLIC.GEEK_INTERET
+12:53:56,484 DEBUG main hibernate.SQL:109 - drop table GEEK_INTERET if exists
+12:53:56,485 DEBUG main hibernate.SQL:109 - drop table Geek if exists
+12:53:56,486 DEBUG main hibernate.SQL:109 - drop table Interet if exists
+12:53:56,487 DEBUG main hibernate.SQL:109 - drop sequence geek_seq
+12:53:56,488 ERROR main hbm2ddl.SchemaExport:425 - HHH000389: Unsuccessful: drop sequence geek_seq
+12:53:56,489 ERROR main hbm2ddl.SchemaExport:426 - user lacks privilege or object not found: GEEK_SEQ in statement [drop sequence geek_seq]
+12:53:56,489 DEBUG main hibernate.SQL:109 - drop sequence interet_seq
+12:53:56,490 ERROR main hbm2ddl.SchemaExport:425 - HHH000389: Unsuccessful: drop sequence interet_seq
+12:53:56,490 ERROR main hbm2ddl.SchemaExport:426 - user lacks privilege or object not found: INTERET_SEQ in statement [drop sequence interet_seq]
+12:53:56,491 DEBUG main hibernate.SQL:109 - create table GEEK_INTERET (IDGEEK bigint not null, IDINTERET bigint not null, primary key (IDGEEK, IDINTERET))
+12:53:56,492 DEBUG main hibernate.SQL:109 - create table Geek (ID bigint not null, gravatar varchar(255), mail varchar(255), nom varchar(255), prenom varchar(255), primary key (ID))
+12:53:56,493 DEBUG main hibernate.SQL:109 - create table Interet (ID bigint not null, description varchar(255), nom varchar(255), primary key (ID))
+12:53:56,494 DEBUG main hibernate.SQL:109 - alter table GEEK_INTERET add constraint FK_lwuuolj8q5j1uctmdferat7ax foreign key (IDINTERET) references Interet
+12:53:56,495 DEBUG main hibernate.SQL:109 - alter table GEEK_INTERET add constraint FK_747i96qa9m0uyav43h268o297 foreign key (IDGEEK) references Geek
+12:53:56,497 DEBUG main hibernate.SQL:109 - create sequence geek_seq start with 1
+12:53:56,497 DEBUG main hibernate.SQL:109 - create sequence interet_seq start with 1
+12:53:56,757 DEBUG Thread-1 hibernate.SQL:109 - alter table GEEK_INTERET drop constraint FK_lwuuolj8q5j1uctmdferat7ax
+12:53:56,759 DEBUG Thread-1 hibernate.SQL:109 - alter table GEEK_INTERET drop constraint FK_747i96qa9m0uyav43h268o297
+12:53:56,760 DEBUG Thread-1 hibernate.SQL:109 - drop table GEEK_INTERET if exists
+12:53:56,761 DEBUG Thread-1 hibernate.SQL:109 - drop table Geek if exists
+12:53:56,762 DEBUG Thread-1 hibernate.SQL:109 - drop table Interet if exists
+12:53:56,763 DEBUG Thread-1 hibernate.SQL:109 - drop sequence geek_seq
+12:53:56,763 DEBUG Thread-1 hibernate.SQL:109 - drop sequence interet_seq
+12:55:09,917 DEBUG main hibernate.SQL:109 - alter table GEEK_INTERET drop constraint FK_lwuuolj8q5j1uctmdferat7ax
+12:55:09,921 DEBUG main hibernate.SQL:109 - alter table GEEK_INTERET drop constraint FK_747i96qa9m0uyav43h268o297
+12:55:09,923 DEBUG main hibernate.SQL:109 - drop table GEEK_INTERET if exists
+12:55:09,924 DEBUG main hibernate.SQL:109 - drop table Geek if exists
+12:55:09,936 DEBUG main hibernate.SQL:109 - drop table Interet if exists
+12:55:09,937 DEBUG main hibernate.SQL:109 - drop sequence geek_seq
+12:55:09,938 DEBUG main hibernate.SQL:109 - drop sequence interet_seq
+12:55:09,939 DEBUG main hibernate.SQL:109 - create table GEEK_INTERET (IDGEEK bigint not null, IDINTERET bigint not null, primary key (IDGEEK, IDINTERET))
+12:55:09,940 DEBUG main hibernate.SQL:109 - create table Geek (ID bigint not null, gravatar varchar(255), mail varchar(255), nom varchar(255), prenom varchar(255), primary key (ID))
+12:55:09,941 DEBUG main hibernate.SQL:109 - create table Interet (ID bigint not null, description varchar(255), nom varchar(255), primary key (ID))
+12:55:09,942 DEBUG main hibernate.SQL:109 - alter table GEEK_INTERET add constraint FK_lwuuolj8q5j1uctmdferat7ax foreign key (IDINTERET) references Interet
+12:55:09,944 DEBUG main hibernate.SQL:109 - alter table GEEK_INTERET add constraint FK_747i96qa9m0uyav43h268o297 foreign key (IDGEEK) references Geek
+12:55:09,945 DEBUG main hibernate.SQL:109 - create sequence geek_seq start with 1
+12:55:09,946 DEBUG main hibernate.SQL:109 - create sequence interet_seq start with 1
+12:55:10,179 DEBUG Thread-1 hibernate.SQL:109 - alter table GEEK_INTERET drop constraint FK_lwuuolj8q5j1uctmdferat7ax
+12:55:10,180 DEBUG Thread-1 hibernate.SQL:109 - alter table GEEK_INTERET drop constraint FK_747i96qa9m0uyav43h268o297
+12:55:10,182 DEBUG Thread-1 hibernate.SQL:109 - drop table GEEK_INTERET if exists
+12:55:10,182 DEBUG Thread-1 hibernate.SQL:109 - drop table Geek if exists
+12:55:10,183 DEBUG Thread-1 hibernate.SQL:109 - drop table Interet if exists
+12:55:10,184 DEBUG Thread-1 hibernate.SQL:109 - drop sequence geek_seq
+12:55:10,185 DEBUG Thread-1 hibernate.SQL:109 - drop sequence interet_seq
+12:57:35,697 DEBUG main hibernate.SQL:109 - alter table GEEK_INTERET drop constraint FK_lwuuolj8q5j1uctmdferat7ax
+12:57:35,701 ERROR main hbm2ddl.SchemaExport:425 - HHH000389: Unsuccessful: alter table GEEK_INTERET drop constraint FK_lwuuolj8q5j1uctmdferat7ax
+12:57:35,711 ERROR main hbm2ddl.SchemaExport:426 - user lacks privilege or object not found: PUBLIC.GEEK_INTERET
+12:57:35,712 DEBUG main hibernate.SQL:109 - alter table GEEK_INTERET drop constraint FK_747i96qa9m0uyav43h268o297
+12:57:35,713 ERROR main hbm2ddl.SchemaExport:425 - HHH000389: Unsuccessful: alter table GEEK_INTERET drop constraint FK_747i96qa9m0uyav43h268o297
+12:57:35,713 ERROR main hbm2ddl.SchemaExport:426 - user lacks privilege or object not found: PUBLIC.GEEK_INTERET
+12:57:35,714 DEBUG main hibernate.SQL:109 - drop table GEEK_INTERET if exists
+12:57:35,715 DEBUG main hibernate.SQL:109 - drop table Geek if exists
+12:57:35,715 DEBUG main hibernate.SQL:109 - drop table Interet if exists
+12:57:35,716 DEBUG main hibernate.SQL:109 - drop sequence geek_seq
+12:57:35,717 ERROR main hbm2ddl.SchemaExport:425 - HHH000389: Unsuccessful: drop sequence geek_seq
+12:57:35,717 ERROR main hbm2ddl.SchemaExport:426 - user lacks privilege or object not found: GEEK_SEQ in statement [drop sequence geek_seq]
+12:57:35,718 DEBUG main hibernate.SQL:109 - drop sequence interet_seq
+12:57:35,718 ERROR main hbm2ddl.SchemaExport:425 - HHH000389: Unsuccessful: drop sequence interet_seq
+12:57:35,719 ERROR main hbm2ddl.SchemaExport:426 - user lacks privilege or object not found: INTERET_SEQ in statement [drop sequence interet_seq]
+12:57:35,719 DEBUG main hibernate.SQL:109 - create table GEEK_INTERET (IDGEEK bigint not null, IDINTERET bigint not null, primary key (IDGEEK, IDINTERET))
+12:57:35,720 DEBUG main hibernate.SQL:109 - create table Geek (ID bigint not null, gravatar varchar(255), mail varchar(255), nom varchar(255), prenom varchar(255), primary key (ID))
+12:57:35,721 DEBUG main hibernate.SQL:109 - create table Interet (ID bigint not null, description varchar(255), nom varchar(255), primary key (ID))
+12:57:35,722 DEBUG main hibernate.SQL:109 - alter table GEEK_INTERET add constraint FK_lwuuolj8q5j1uctmdferat7ax foreign key (IDINTERET) references Interet
+12:57:35,724 DEBUG main hibernate.SQL:109 - alter table GEEK_INTERET add constraint FK_747i96qa9m0uyav43h268o297 foreign key (IDGEEK) references Geek
+12:57:35,725 DEBUG main hibernate.SQL:109 - create sequence geek_seq start with 1
+12:57:35,726 DEBUG main hibernate.SQL:109 - create sequence interet_seq start with 1
+12:57:36,132 DEBUG Thread-1 hibernate.SQL:109 - alter table GEEK_INTERET drop constraint FK_lwuuolj8q5j1uctmdferat7ax
+12:57:36,134 DEBUG Thread-1 hibernate.SQL:109 - alter table GEEK_INTERET drop constraint FK_747i96qa9m0uyav43h268o297
+12:57:36,135 DEBUG Thread-1 hibernate.SQL:109 - drop table GEEK_INTERET if exists
+12:57:36,136 DEBUG Thread-1 hibernate.SQL:109 - drop table Geek if exists
+12:57:36,137 DEBUG Thread-1 hibernate.SQL:109 - drop table Interet if exists
+12:57:36,137 DEBUG Thread-1 hibernate.SQL:109 - drop sequence geek_seq
+12:57:36,138 DEBUG Thread-1 hibernate.SQL:109 - drop sequence interet_seq
+12:58:16,539 DEBUG main hibernate.SQL:109 - alter table GEEK_INTERET drop constraint FK_lwuuolj8q5j1uctmdferat7ax
+12:58:16,544 ERROR main hbm2ddl.SchemaExport:425 - HHH000389: Unsuccessful: alter table GEEK_INTERET drop constraint FK_lwuuolj8q5j1uctmdferat7ax
+12:58:16,556 ERROR main hbm2ddl.SchemaExport:426 - user lacks privilege or object not found: PUBLIC.GEEK_INTERET
+12:58:16,556 DEBUG main hibernate.SQL:109 - alter table GEEK_INTERET drop constraint FK_747i96qa9m0uyav43h268o297
+12:58:16,557 ERROR main hbm2ddl.SchemaExport:425 - HHH000389: Unsuccessful: alter table GEEK_INTERET drop constraint FK_747i96qa9m0uyav43h268o297
+12:58:16,558 ERROR main hbm2ddl.SchemaExport:426 - user lacks privilege or object not found: PUBLIC.GEEK_INTERET
+12:58:16,558 DEBUG main hibernate.SQL:109 - drop table GEEK_INTERET if exists
+12:58:16,559 DEBUG main hibernate.SQL:109 - drop table Geek if exists
+12:58:16,559 DEBUG main hibernate.SQL:109 - drop table Interet if exists
+12:58:16,560 DEBUG main hibernate.SQL:109 - drop sequence geek_seq
+12:58:16,561 ERROR main hbm2ddl.SchemaExport:425 - HHH000389: Unsuccessful: drop sequence geek_seq
+12:58:16,561 ERROR main hbm2ddl.SchemaExport:426 - user lacks privilege or object not found: GEEK_SEQ in statement [drop sequence geek_seq]
+12:58:16,561 DEBUG main hibernate.SQL:109 - drop sequence interet_seq
+12:58:16,562 ERROR main hbm2ddl.SchemaExport:425 - HHH000389: Unsuccessful: drop sequence interet_seq
+12:58:16,563 ERROR main hbm2ddl.SchemaExport:426 - user lacks privilege or object not found: INTERET_SEQ in statement [drop sequence interet_seq]
+12:58:16,563 DEBUG main hibernate.SQL:109 - create table GEEK_INTERET (IDGEEK bigint not null, IDINTERET bigint not null, primary key (IDGEEK, IDINTERET))
+12:58:16,564 DEBUG main hibernate.SQL:109 - create table Geek (ID bigint not null, gravatar varchar(255), mail varchar(255), nom varchar(255), prenom varchar(255), primary key (ID))
+12:58:16,565 DEBUG main hibernate.SQL:109 - create table Interet (ID bigint not null, description varchar(255), nom varchar(255), primary key (ID))
+12:58:16,566 DEBUG main hibernate.SQL:109 - alter table GEEK_INTERET add constraint FK_lwuuolj8q5j1uctmdferat7ax foreign key (IDINTERET) references Interet
+12:58:16,567 DEBUG main hibernate.SQL:109 - alter table GEEK_INTERET add constraint FK_747i96qa9m0uyav43h268o297 foreign key (IDGEEK) references Geek
+12:58:16,569 DEBUG main hibernate.SQL:109 - create sequence geek_seq start with 1
+12:58:16,569 DEBUG main hibernate.SQL:109 - create sequence interet_seq start with 1
+12:58:16,865 DEBUG main hibernate.SQL:109 - select geek0_.ID as ID1_1_, geek0_.gravatar as gravatar2_1_, geek0_.mail as mail3_1_, geek0_.nom as nom4_1_, geek0_.prenom as prenom5_1_ from Geek geek0_
+12:58:17,090 DEBUG Thread-1 hibernate.SQL:109 - alter table GEEK_INTERET drop constraint FK_lwuuolj8q5j1uctmdferat7ax
+12:58:17,092 DEBUG Thread-1 hibernate.SQL:109 - alter table GEEK_INTERET drop constraint FK_747i96qa9m0uyav43h268o297
+12:58:17,093 DEBUG Thread-1 hibernate.SQL:109 - drop table GEEK_INTERET if exists
+12:58:17,093 DEBUG Thread-1 hibernate.SQL:109 - drop table Geek if exists
+12:58:17,094 DEBUG Thread-1 hibernate.SQL:109 - drop table Interet if exists
+12:58:17,095 DEBUG Thread-1 hibernate.SQL:109 - drop sequence geek_seq
+12:58:17,095 DEBUG Thread-1 hibernate.SQL:109 - drop sequence interet_seq
+13:01:36,700 DEBUG main hibernate.SQL:109 - select geek0_.ID as ID1_1_, geek0_.gravatar as gravatar2_1_, geek0_.mail as mail3_1_, geek0_.nom as nom4_1_, geek0_.prenom as prenom5_1_ from Geek geek0_
+13:02:56,588 DEBUG main hibernate.SQL:109 - select geek0_.ID as ID1_1_, geek0_.gravatar as gravatar2_1_, geek0_.mail as mail3_1_, geek0_.nom as nom4_1_, geek0_.prenom as prenom5_1_ from Geek geek0_

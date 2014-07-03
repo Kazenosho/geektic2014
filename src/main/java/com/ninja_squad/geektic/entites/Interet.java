@@ -27,7 +27,7 @@ public class Interet {
 	@Column
 	private String description;
 	
-	@ManyToMany(mappedBy="interet")
+	@ManyToMany(mappedBy="interets")
 	private Set<Geek> geeks;
 	
 	public String getNom() {
