@@ -4,6 +4,7 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -37,7 +38,7 @@ public class Geek {
 	@Column
 	private String gravatar;
 	
-	@ManyToMany
+	@ManyToMany(fetch=FetchType.EAGER)
 	@JoinTable(name = "GEEK_INTERET",
 	           joinColumns = @JoinColumn(name = "IDGEEK"),
 	           inverseJoinColumns = @JoinColumn(name = "IDINTERET"))
@@ -84,7 +85,7 @@ public class Geek {
 		this.gravatar = gravatar;
 	}
 
-	public Set<Interet> getInteret() {
+	public Set<Interet> getInterets() {
 		return interets;
 	}
 

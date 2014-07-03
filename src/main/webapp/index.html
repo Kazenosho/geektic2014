@@ -4,8 +4,8 @@
     <head>
         <title>Geektic</title>
     </head>
-    <body ng-controller="HelloCtrl">
-        <h1>{{ helloMessage.message }}</h1>
+    <body ng-controller="afficheGeeks">
+        <h1 ng-repeat="geek in afficheGeeks">{{ geek.nom }}</h1>
 
         <script src="/js/angular.js"></script>
         <script src="/js/angular-route.js"></script>

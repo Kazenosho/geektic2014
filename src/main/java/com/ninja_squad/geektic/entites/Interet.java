@@ -30,6 +30,7 @@ public class Interet {
 	@ManyToMany(mappedBy="interets")
 	private Set<Geek> geeks;
 	
+	public Interet(){}
 	public String getNom() {
 		return nom;
 	}
