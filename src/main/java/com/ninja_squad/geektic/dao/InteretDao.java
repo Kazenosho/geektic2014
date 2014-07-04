@@ -16,16 +16,16 @@ public class InteretDao {
         @PersistenceContext
         private EntityManager em;
 
-         public List<Interet> getAllInteret()
+         public List<Interet> findAll()
          {
-         String jpql = "Select i from Interet as i";
-         TypedQuery<Interet> query = em.createQuery(jpql, Interet.class);
-         return query.getResultList(); 
+	         String jpql = "Select i from Interet as i";
+	         TypedQuery<Interet> query = em.createQuery(jpql, Interet.class);
+	         return query.getResultList(); 
          }
          
          public Interet getInteretById(int id)
          {
-         return em.find(Interet.class, id); 
+        	 return em.find(Interet.class, id); 
          }
 
 }

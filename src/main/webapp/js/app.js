@@ -16,12 +16,33 @@ app.config(function($routeProvider){
 		controller: 'geekCtl'
 	})
 
+
 });
 
 app.controller('afficheGeeksCtl', function($scope, $http, $routeParams) {
+		$scope.selection= {interet:0};
+		$scope.filtreInteret = function(geek){
+			if($scope.selection.interet != "0"){
+				for(var i =0; i < geek.interets.length; i++){
+					var interet = geek.interets[i];
+					
+					if(interet.id == $scope.selection.interet){
+						return true;
+					}	
+				}
+				return false;
+			}
+			else{
+				
+				return true;
+			}
+		}
 	
     $http.get('/afficheGeeks/' + $routeParams.sexe).success(function(geeksListe) {
         $scope.geeksListe = geeksListe;
+    });
+    $http.get('/interets').success(function(interets) {
+        $scope.interets = interets;
     });
 });
 
@@ -31,4 +52,6 @@ app.controller('geekCtl', function($scope, $http, $routeParams) {
         $scope.geek = geek;
     });
 });
+
+
 

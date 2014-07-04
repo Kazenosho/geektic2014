@@ -25,9 +25,9 @@ public class InteretDaoTest extends BaseDaoTest{
         private InteretDao InteretTest;
         @Test
         public void testGetAllInteret() {
-                List<Interet> MaListe= InteretTest.getAllInteret();
+                List<Interet> MaListe= InteretTest.findAll();
 
-                assertEquals(MaListe.size(),3);
+                assertEquals(MaListe.size(),6);
         }
 
 

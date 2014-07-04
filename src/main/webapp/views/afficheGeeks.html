@@ -1,0 +1,23 @@
+<a href="#/" class="btn btn-primary" >Accueil</a><br><br>
+<label for="interet">Sélectionner un intérêt</label>
+<select name="interet" ng-model="selection.interet">
+	<option value="0">-</option>
+	<option  ng-repeat="interet in interets"  value="{{interet.id}}">{{interet.nom}}</option>
+</select>
+<table class="table table-bordered table-striped">
+	<thead>
+		<th>Nom</th>
+		<th>Prénom</th>
+		<th>Email</th>
+		<th>Voir le profil</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="geek in geeksListe|filter:filtreInteret">
+			<td>{{ geek.nom }}</td>
+			<td>{{ geek.prenom }}</td>
+			<td>{{ geek.mail }}</td>
+			<td><a href="#/geek/{{geek.id}}"  class="btn btn-primary">Visiter</a></td>
+		</tr>
+	</tbody>
+</table>
+

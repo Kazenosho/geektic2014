@@ -2,7 +2,19 @@
 <div class="text-center" style="margin-top:20px">
 	<p>{{geek.nom}} {{geek.prenom}}</p>
 	<img class="img-thumbnail" src="/img/{{geek.gravatar}}"/><br><br><br>
-	<a class="btn btn-primary btn-lg" href="mailto:{{geek.mail}}">Envoyer un email</a>
+	<a class="btn btn-primary btn-lg" href="mailto:{{geek.mail}}">Envoyer un email</a><br><br>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<th>Intérêt</th>
+			<th>Description</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="interet in geek.interets">
+				<td>{{ interet.nom }}</td>
+				<td>{{ interet.description }}</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
 
 
