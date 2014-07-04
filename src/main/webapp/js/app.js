@@ -50,6 +50,9 @@ app.controller('geekCtl', function($scope, $http, $routeParams) {
     $http.get('/geek/' + $routeParams.id).success(function(geek) {
         $scope.geek = geek;
     });
+    $http.get('/visites/' + $routeParams.id).success(function(nbVisites) {
+        $scope.nbVisites = nbVisites;
+    });
     
 });
 

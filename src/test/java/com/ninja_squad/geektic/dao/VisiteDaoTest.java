@@ -13,25 +13,26 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
+import com.ninja_squad.geektic.entites.Geek;
 import com.ninja_squad.geektic.entites.Visite;
 import com.ninja_squad.geektic.service.GeekService;
 
 
-public class VisiteDaoTest {
-
-	private VisiteDao mockVisiteDao;
-	private GeekService service;
+public class VisiteDaoTest extends BaseDaoTest{
+	
+	@Autowired
+	private VisiteDao visiteDaoTest;
 
 	@Before
 	public void setUp() throws Exception {
-		mockVisiteDao = mock(VisiteDao.class);
-		service = new GeekService(mockVisiteDao);
 	}
 
 	@Test
 	public void test() {
-		
+		int nb = visiteDaoTest.findNbVisite(1);
+		assertEquals(nb, 3);
 	}
 
 }

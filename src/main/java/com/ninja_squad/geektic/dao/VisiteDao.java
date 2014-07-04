@@ -17,10 +17,11 @@ public class VisiteDao {
     private EntityManager em;
 	
 	public int findNbVisite(int idGeek){
-		String jpql = "SELECT COUNT (visite.IdGeek) FROM Visite where IdGeek =:idGeek";
-		Query query = em.createQuery(jpql);
+		Query query=em.createQuery("SELECT COUNT (*) FROM Visite where idGeek =:idGeek");
 		query.setParameter("idGeek", idGeek);
-		return (int) query.getSingleResult();
+		Long result=(Long) query.getSingleResult();
+		int nbVisites = result.intValue();
+		return nbVisites;
 	}
 	
 	public void addVisite(Visite v){
