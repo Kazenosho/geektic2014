@@ -19,7 +19,7 @@ public class Interet {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="id")
 	@Column(name="ID")
-	private Long id;	
+	private int id;	
 	
 	@Column
 	private String nom;
@@ -51,10 +51,10 @@ public class Interet {
 		this.nom = nom;
 		this.description = description;
 	}
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	

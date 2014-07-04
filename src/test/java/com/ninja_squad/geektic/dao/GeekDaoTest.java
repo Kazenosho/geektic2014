@@ -33,7 +33,7 @@ public class GeekDaoTest extends BaseDaoTest{
 	
 	@Test
 	public void testRecupGeekById() {
-		Geek geek = geekDaoTest.findGeekById(1L);
+		Geek geek = geekDaoTest.findGeekById(1);
 		assertEquals(geek.getNom(), "Affou");
 	}
 

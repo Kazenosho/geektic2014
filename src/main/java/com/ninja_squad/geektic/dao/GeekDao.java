@@ -23,7 +23,7 @@ public class GeekDao {
 		return query.getResultList(); 
 	}
 	
-	 public Geek findGeekById(long id)
+	 public Geek findGeekById(int id)
      {
 		 return em.find(Geek.class, id); 
      }

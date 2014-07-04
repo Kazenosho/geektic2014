@@ -47,10 +47,10 @@ app.controller('afficheGeeksCtl', function($scope, $http, $routeParams) {
 });
 
 app.controller('geekCtl', function($scope, $http, $routeParams) {
-	
     $http.get('/geek/' + $routeParams.id).success(function(geek) {
         $scope.geek = geek;
     });
+    
 });
 
 

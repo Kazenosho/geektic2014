@@ -24,7 +24,7 @@ public class Geek {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="id")
 	@Column(name="ID")
-	private Long id;	
+	private int id;	
 	
 	@Column
 	private String nom;
@@ -105,11 +105,11 @@ public class Geek {
 		this.sexe = sexe;
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
